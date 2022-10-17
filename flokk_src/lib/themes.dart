@@ -134,16 +134,17 @@ class AppTheme {
         ),
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         textSelectionTheme: TextSelectionThemeData(
-            selectionColor: greyWeak,
-            selectionHandleColor: Colors.transparent,
-            cursorColor: accent1,
+          selectionColor: greyWeak,
+          selectionHandleColor: Colors.transparent,
+          cursorColor: accent1,
         ),
         buttonTheme: ButtonThemeData(
-            buttonColor: accent1,
+          buttonColor: accent1,
         ),
         highlightColor: accent1,
         toggleableActiveColor: accent1);
   }
 
-  Color shift(Color c, double d) => ColorUtils.shiftHsl(c, d * (isDark? -1 : 1));
+  Color shift(Color c, double d) =>
+      ColorUtils.shiftHsl(c, d * (isDark ? -1 : 1));
 }

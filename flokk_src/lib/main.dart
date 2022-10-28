@@ -20,6 +20,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:universal_platform/universal_platform.dart';
+import 'package:flokk/views/main_scaffold/main_scaffold.dart';
 
 //Developer hook to force login while testing locally (sidesteps Oauth flow)
 const bool kForceWebLogin =
@@ -160,7 +161,8 @@ class _MainAppState extends State<MainApp> {
         theme: theme.themeData,
 
         /// Home defaults to SplashView, BootstrapCommand will load the initial page
-        home: WelcomePage(key: _welcomePageKey),
+        /// TODO: WelcomePage 부분 삭제.
+        home: MainScaffold(),
 
         /// Wrap root navigator in various styling widgets
         builder: (_, navigator) {
